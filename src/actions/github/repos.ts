@@ -1,8 +1,4 @@
-"use server";
-
-import { octokitNew } from "./github";
-
-const octokit = await octokitNew();
+import { octokit } from "./github";
 
 export const getRepos = async ({
   username,

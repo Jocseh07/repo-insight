@@ -4,6 +4,7 @@ import { Toaster } from "sonner";
 
 import { type Metadata } from "next";
 import { Outfit } from "next/font/google";
+import { auth } from "@clerk/nextjs/server";
 
 const outfit = Outfit({
   subsets: ["latin"],

@@ -1,13 +1,12 @@
+import { env } from "@/env";
 import { Octokit } from "octokit";
-import { getToken } from "../user/getToken";
 
-// export const octokit = new Octokit({
-//   auth: token,
-// });
+export const octokit = new Octokit({
+  auth: env.GITHUB_TOKEN,
+});
 
-export const octokitNew = async () => {
-  const token = await getToken();
-  return new Octokit({
-    auth: token,
-  });
-};
+// export async function newOctokit() {
+//   return new Octokit({
+//     // auth: token,
+//   });
+// }

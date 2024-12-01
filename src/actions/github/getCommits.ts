@@ -9,8 +9,7 @@ import { getProcessedCommits } from "../project/project";
 import { summarizeCommits } from "../gemini/gemini";
 import axios from "axios";
 import { db } from "@/server/db";
-import { octokitNew } from "./github";
-const octokit = await octokitNew();
+import { octokit } from "./github";
 
 const repoUrl = "https://github.com/Valritehachi/PlatePlan";
 

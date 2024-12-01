@@ -1,7 +1,6 @@
-import { getUserRepos } from "@/actions/github/repos";
+import { getRateLimit } from "@/actions/github/rates";
 
 export default async function HomePage() {
-  const repos = await getUserRepos();
-  console.log(repos);
+  const rateLimit = await getRateLimit();
   return <div>Home</div>;
 }
